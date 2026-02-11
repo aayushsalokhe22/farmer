@@ -1,0 +1,66 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 10
+int deque[MAX];
+int front=-1, rear=-1;
+void insertfront(int value){
+    if((front==0 && rear == MAX-1) || (front ==rear+1))
+    printf("Deque overflow");
+    else{
+        if(front==-1){
+            front= rear=0;
+        }
+    }else{
+        if(front==0){
+            front=MAX-1;
+        }
+    }else{
+        front=front-1;
+    }
+    dequeue[front]=value;
+}
+void insert rear (int value){
+    if((front==0 && rear==MAX-1)||(front==rear+1)){
+    printf("deque overflow cannot insert");
+}else if(front==-1){
+    front=rear=0;
+}else if(rear==max-1){
+    rear =0;
+}else{rear=rear+1;
+}
+dequeue[rear]= value;
+printf("%d inserted at rear"value);
+}
+void display(){
+    int i;
+    if(front== -1)
+    printf("deque is empty");
+    else{
+        printf("deque elements are:");
+        i=front;
+        while(1){
+        printf("")
+
+
+
+        switch(choice){
+            case 1:
+            printf("Enetr the valye to be insert at front:");
+            scanf("%d", &value);
+            insertfront(value);
+            break;
+            case 2:
+            printf("Enter the value to be insert at rear :");
+            scanf("%d",&value);
+            insertrear(value);
+            break;
+            case 3:
+            display();
+            break;
+            case 4:
+            exit(0);
+            default:
+        }
+        }
+    }
+}
